@@ -1,0 +1,19 @@
+# Données générées (reproductibles avec `python data/generate_dataset.py`)
+data/raw/
+reporting/out/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+
+# Secrets & environnement
+.env
+*.env
+
+# Éditeurs / OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
