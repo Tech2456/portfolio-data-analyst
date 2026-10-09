@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aboubacar Bassinga · Data Analyst</title>
+  <meta name="description" content="Aboubacar Bassinga, développeur devenu Data Analyst à Ouagadougou. Pilotage de la performance commerciale par la donnée : SQL, Python, reporting, détection d'alertes.">
+  <meta name="author" content="Aboubacar Bassinga">
+  <meta property="og:title" content="Aboubacar Bassinga · Data Analyst">
+  <meta property="og:description" content="Étude de cas complète : pilotage commercial d'un fournisseur d'accès fibre, de la base SQL aux recommandations.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#07090d">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2339d0ff'/%3E%3Cstop offset='1' stop-color='%237c5cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='9' fill='url(%23g)'/%3E%3Cpath d='M8 22l5-6 4 3 7-9' stroke='%2304121a' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <div class="progress" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="#top" aria-label="Accueil"><span class="brand__mark">AB</span><span>Aboubacar Bassinga</span></a>
+      <nav class="nav__links" aria-label="Sections">
+        <a href="#etude">Étude de cas</a>
+        <a href="#recommandations">Recommandations</a>
+        <a href="#reporting">Reporting</a>
+        <a href="#parcours">Parcours</a>
+        <a href="#competences">Compétences</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Changer de thème">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="hero">
+      <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div>
+          <span class="eyebrow"><span class="dot"></span>Disponible · Ouagadougou</span>
+          <h1>
+            <span class="word">Je</span> <span class="word">transforme</span> <span class="word">les</span> <span class="word">données</span>
+            <span class="word">commerciales</span> <span class="word">en</span> <span class="word grad">décisions.</span>
+          </h1>
+          <p class="hero__lead">
+            Développeur de formation, analyste par passion. J'écris le SQL, l'automatisation Python et le reporting
+            qui permettent à une direction commerciale de <span class="typed" id="typed">repérer une alerte avant qu'elle coûte.</span>
+          </p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#etude">Voir l'étude de cas
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn btn--ghost" href="assets/CV_Aboubacar_Bassinga_Data_Analyst.pdf" download>Télécharger mon CV</a>
+            <a class="btn btn--ghost" href="https://github.com/Tech2456/portfolio-data-analyst" target="_blank" rel="noopener">Code source</a>
+          </div>
+          <div class="hero__meta">
+            <span>◆ SQL avancé (MySQL / MariaDB)</span>
+            <span>◆ Python · pandas</span>
+            <span>◆ Reporting Excel automatisé</span>
+          </div>
+        </div>
+
+        <aside class="live" aria-label="Aperçu du tableau de bord">
+          <div class="live__head"><i></i><i></i><i></i><span>fibrenet_bi · septembre 2026</span></div>
+          <div class="live__kpis">
+            <div class="kpi-mini"><small>Parc actif</small><b data-count="10623">0</b><span class="up">▲ +414 vs M-1</span></div>
+            <div class="kpi-mini"><small>Réabonnement</small><b data-count="92.6" data-decimals="1" data-suffix=" %">0</b><span class="muted" style="font-size:12px">M-1 : 93,2 %</span></div>
+          </div>
+          <div class="live__spark">
+            <small class="muted">Revenu mensuel (M FCFA)</small>
+            <svg viewBox="0 0 300 70" preserveAspectRatio="none" height="70" width="100%" aria-hidden="true">
+              <defs><linearGradient id="sparkFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--accent)" stop-opacity=".35"/><stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient></defs>
+              <path class="area" id="sparkArea" d=""/>
+              <path class="line" id="sparkLine" d=""/>
+            </svg>
+          </div>
+          <div class="live__query" id="liveQuery" aria-hidden="true"></div>
+          <div class="live__alert" role="status"><span class="status critical"></span><span><b>Alerte</b> · Distributeurs à Tampouy : <b>−71 %</b></span></div>
+        </aside>
+      </div>
+      <div class="scroll-hint" aria-hidden="true"><i></i>défiler</div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>CTE</span><span>Fonctions de fenêtrage</span><span>Taux de conversion</span><span>Parc actif</span><span>Réabonnement</span><span>Cohortes</span><span>CUSUM</span><span>Détection de fraude</span><span>Sectorisation</span><span>Reporting automatisé</span><span>pandas</span><span>Tests unitaires</span>
+        <span>CTE</span><span>Fonctions de fenêtrage</span><span>Taux de conversion</span><span>Parc actif</span><span>Réabonnement</span><span>Cohortes</span><span>CUSUM</span><span>Détection de fraude</span><span>Sectorisation</span><span>Reporting automatisé</span><span>pandas</span><span>Tests unitaires</span>
+      </div>
+    </div>
+
+    <!-- ================= CHIFFRES ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="stats">
+          <div class="stat reveal"><b data-count="153000" data-prefix="+">0</b><span>lignes de données analysées (ventes, paiements, prospects)</span></div>
+          <div class="stat reveal" data-delay="1"><b data-count="7">0</b><span>requêtes SQL de pilotage, du schéma aux scores de risque</span></div>
+          <div class="stat reveal" data-delay="2"><b><span data-count="3">0</span>/3</b><span>anomalies cachées retrouvées, sans fausse alerte</span></div>
+          <div class="stat reveal" data-delay="3"><b data-count="19">0</b><span>tests automatisés : chaque calcul est vérifié</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ÉTUDE DE CAS ================= -->
+    <section class="section" id="etude" style="padding-top:40px">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__num">01 — ÉTUDE DE CAS</span>
+          <h2>Piloter la performance commerciale d'un fournisseur fibre</h2>
+          <p>FibreNet Faso est un fournisseur d'accès Internet fibre <strong>fictif</strong> à Ouagadougou : 12 quartiers, 5 canaux de vente,
+             30 agents terrain, 21 mois d'activité. J'ai simulé ses données de façon réaliste et y ai caché trois anomalies,
+             puis j'ai construit la chaîne d'analyse qu'utiliserait une Direction Commerciale pour les retrouver.</p>
+        </div>
+
+        <div class="case-intro">
+          <div class="card reveal"><h4>La question</h4><p>Où la performance décroche-t-elle, pourquoi, et quelles actions lancer en priorité&nbsp;?</p></div>
+          <div class="card reveal" data-delay="1"><h4>Les données</h4><p>21 000 ventes, 132 000 paiements mensuels, prospects et objectifs par canal. Aucune donnée personnelle : les clients sont pseudonymisés.</p></div>
+          <div class="card reveal" data-delay="2"><h4>La méthode</h4><p>Modèle MariaDB, 6 requêtes analytiques (CTE, fenêtrage), analyses Python (cohortes, CUSUM), rapport Excel automatique.</p></div>
+        </div>
+
+        <div class="panel reveal" style="padding:32px 24px">
+          <div class="pipeline" id="pipeline">
+            <div class="pipeline__flow"></div>
+            <div class="pipeline__step"><div class="node">🧪</div><b>Simulation</b><small>Python · numpy</small></div>
+            <div class="pipeline__step"><div class="node">🗄️</div><b>Base MariaDB</b><small>8 tables · clés étrangères</small></div>
+            <div class="pipeline__step"><div class="node">⚡</div><b>Requêtes SQL</b><small>KPIs · alertes · scores</small></div>
+            <div class="pipeline__step"><div class="node">🐍</div><b>Analyses Python</b><small>cohortes · CUSUM</small></div>
+            <div class="pipeline__step"><div class="node">📊</div><b>Restitution</b><small>Excel · tableau de bord</small></div>
+          </div>
+          <p class="muted" style="text-align:center;margin:26px 0 0;font-size:14px">Tout se reconstruit en une commande&nbsp;: <code class="mono">python run_all.py</code> · moins de 20 secondes</p>
+        </div>
+
+        <!-- Chapitre 1 : KPIs -->
+        <article class="chapter" id="kpis">
+          <div class="chapter__grid">
+            <div class="chapter__side reveal">
+              <span class="section__num">1.1</span>
+              <h3>Les KPIs commerciaux</h3>
+              <p>Ventes, contribution par canal, atteinte des objectifs, parc actif, réabonnement et revenu, calculés en SQL
+                 avec des fonctions de fenêtrage (<code class="mono">LAG</code>, moyennes mobiles, parts du total).</p>
+              <span class="tag">CTE</span><span class="tag">LAG()</span><span class="tag">SUM() OVER</span><span class="tag">AVG() ROWS BETWEEN</span>
+              <div class="insight">Le terrain porte <strong>41,5 %</strong> des ventes. En septembre, deux canaux sur cinq seulement atteignent leur objectif.</div>
+            </div>
+            <div>
+              <div class="kpi-row" id="kpiRow"></div>
+              <div class="panel reveal">
+                <div class="panel__head">
+                  <h5>Ventes mensuelles par canal</h5>
+                  <span class="muted">janv. 2025 → sept. 2026</span>
+                  <div class="panel__tools" role="group" aria-label="Période">
+                    <button class="chip" data-range="6" aria-pressed="false">6 mois</button>
+                    <button class="chip" data-range="12" aria-pressed="false">12 mois</button>
+                    <button class="chip" data-range="all" aria-pressed="true">Tout</button>
+                  </div>
+                </div>
+                <div class="chart-box"><canvas id="salesChart" role="img" aria-label="Courbes des ventes mensuelles pour les 5 canaux"></canvas></div>
+                <div class="legend" id="salesLegend"></div>
+              </div>
+              <div class="panel reveal">
+                <div class="panel__head"><h5>Atteinte des objectifs · septembre 2026</h5></div>
+                <div class="table-wrap"><table id="attainTable"></table></div>
+              </div>
+              <details class="code"><summary>sql/01_kpi_ventes_canal.sql <span class="lang">SQL</span></summary><pre><code class="language-sql" data-src="assets/sql/01_kpi_ventes_canal.sql"></code></pre></details>
+              <details class="code"><summary>sql/02_parc_reabonnement.sql <span class="lang">SQL</span></summary><pre><code class="language-sql" data-src="assets/sql/02_parc_reabonnement.sql"></code></pre></details>
+            </div>
+          </div>
+        </article>
+
+        <!-- Chapitre 2 : Alertes -->
+        <article class="chapter" id="alertes">
+          <div class="chapter__grid">
+            <div class="chapter__side reveal">
+              <span class="section__num">1.2</span>
+              <h3>Alertes &amp; signaux faibles</h3>
+              <p>L'agrégat national paraît sain : les Distributeurs remontent même de <strong>+31,6 %</strong> en septembre. Pourtant, deux quartiers décrochent.
+                 Deux méthodes complémentaires&nbsp;:</p>
+              <p><b>SQL</b> : chaque canal × zone comparé à sa moyenne des 3 derniers mois, avec un seuil statistique (écart &gt; 2σ, loi de Poisson) pour ignorer le bruit.</p>
+              <p><b>Python · CUSUM</b> : accumule les petits écarts et repère les dérives qui s'installent, que la moyenne mobile finit par absorber.</p>
+              <div class="insight">Le SQL attrape <strong>Tampouy</strong>. Le CUSUM retrouve <strong>Tampouy et Tanghin</strong>, les deux zones sabotées dans la simulation, et rien d'autre.</div>
+            </div>
+            <div>
+              <div class="alerts" id="alertCards"></div>
+              <div class="panel reveal">
+                <div class="panel__head"><h5>Part de la zone dans les ventes Distributeurs</h5><span class="muted">référence = moyenne 2025</span></div>
+                <div class="chart-box"><canvas id="ruptureChart" role="img" aria-label="Part mensuelle de Tampouy et Tanghin dans les ventes du canal Distributeurs"></canvas></div>
+                <div class="legend" id="ruptureLegend"></div>
+              </div>
+              <details class="code"><summary>sql/03_alertes.sql <span class="lang">SQL</span></summary><pre><code class="language-sql" data-src="assets/sql/03_alertes.sql"></code></pre></details>
+              <details class="code"><summary>analysis/ruptures.py — CUSUM <span class="lang">Python</span></summary><pre><code class="language-python">def cusum_lower(z_scores, k=0.5, h=5.0):
+    """CUSUM unilatéral : renvoie le premier mois où la dérive cumulée dépasse h."""
+    statistic = 0.0
+    for i, z in enumerate(z_scores):
+        statistic = max(0.0, statistic - z - k)
+        if statistic > h:
+            return i
+    return None
+
+# Ventes attendues ~ Binomiale(total du canal, part historique de la zone)
+expected = watch["channel_total"] * ref_share
+z = (watch["sales"] - expected) / np.sqrt(expected * (1 - ref_share))
+idx = cusum_lower(z.to_numpy())</code></pre></details>
+            </div>
+          </div>
+        </article>
+
+        <!-- Chapitre 3 : Réabonnement -->
+        <article class="chapter" id="reabonnement">
+          <div class="chapter__grid">
+            <div class="chapter__side reveal">
+              <span class="section__num">1.3</span>
+              <h3>Réabonnement &amp; valeur des canaux</h3>
+              <p>Chaque ligne est une cohorte de clients activés le même mois. On lit combien paient encore 1, 2, … 12 mois plus tard.</p>
+              <div class="insight"><strong>La découverte :</strong> le Digital atteint son objectif de ventes (100,5 %), mais seuls <strong>21,6 %</strong> de ses clients sont encore là à 12 mois, contre <strong>49,9 %</strong> en boutique.
+                Piloter ce canal au volume de ventes masque une perte de valeur.</div>
+            </div>
+            <div>
+              <div class="panel reveal">
+                <div class="panel__head"><h5>Rétention par cohorte d'activation</h5><span class="muted">% de clients encore payants</span></div>
+                <div class="table-wrap"><div class="heatmap" id="heatmap" role="table" aria-label="Matrice de rétention par cohorte"></div></div>
+                <div class="legend"><span>0 %</span><span class="ramp"></span><span>100 %</span></div>
+              </div>
+              <div class="panel reveal">
+                <div class="panel__head">
+                  <h5>Clients encore actifs, par canal d'acquisition</h5>
+                  <div class="panel__tools" role="group" aria-label="Horizon">
+                    <button class="chip" data-age="M3" aria-pressed="false">3 mois</button>
+                    <button class="chip" data-age="M6" aria-pressed="false">6 mois</button>
+                    <button class="chip" data-age="M12" aria-pressed="true">12 mois</button>
+                  </div>
+                </div>
+                <div class="chart-box"><canvas id="retentionChart" role="img" aria-label="Rétention par canal"></canvas></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Chapitre 4 : Entonnoir -->
+        <article class="chapter" id="entonnoir">
+          <div class="chapter__grid">
+            <div class="chapter__side reveal">
+              <span class="section__num">1.4</span>
+              <h3>L'entonnoir, du prospect au client fidèle</h3>
+              <p>Prospects → ventes → activations → clients encore actifs 3 mois plus tard, sur les ventes d'avril à juin 2026.</p>
+              <div class="insight">Sur 100 prospects, les Boutiques produisent <strong>34 clients durables</strong>, le Digital <strong>moins de 5</strong>.
+                Le Digital génère beaucoup de contacts : c'est sa <strong>qualification</strong> qu'il faut travailler.</div>
+            </div>
+            <div>
+              <div class="panel reveal">
+                <div class="panel__head"><h5>Taux de bout en bout par canal</h5><span class="muted">prospect → actif à M+3</span></div>
+                <div class="chart-box"><canvas id="funnelChart" role="img" aria-label="Taux de conversion de bout en bout par canal"></canvas></div>
+              </div>
+              <div class="panel reveal"><div class="table-wrap"><table id="funnelTable"></table></div></div>
+              <details class="code"><summary>sql/04_entonnoir_conversion.sql <span class="lang">SQL</span></summary><pre><code class="language-sql" data-src="assets/sql/04_entonnoir_conversion.sql"></code></pre></details>
+            </div>
+          </div>
+        </article>
+
+        <!-- Chapitre 5 : Potentiel zones -->
+        <article class="chapter" id="zones">
+          <div class="chapter__grid">
+            <div class="chapter__side reveal">
+              <span class="section__num">1.5</span>
+              <h3>Potentiel par zone &amp; priorités de prospection</h3>
+              <p>Score de priorité par quartier : <b>45 %</b> marge de conquête (foyers raccordables non abonnés), <b>25 %</b> pouvoir d'achat,
+                 <b>20 %</b> fidélité, <b>10 %</b> dynamique récente. Normalisation min-max en SQL.</p>
+              <div class="insight">Les cibles prioritaires pour la force de vente sont <strong>Ouaga 2000</strong>, <strong>Pissy</strong> et <strong>Tampouy</strong>.
+                Tampouy a un fort potentiel mais une distribution en panne : c'est une urgence.</div>
+            </div>
+            <div>
+              <div class="panel reveal">
+                <div class="panel__head"><h5>Score de priorité par quartier</h5><span class="muted">sur 100</span></div>
+                <div class="chart-box tall"><canvas id="zoneChart" role="img" aria-label="Score de priorité des 12 quartiers"></canvas></div>
+              </div>
+              <details class="code"><summary>sql/06_potentiel_zones.sql <span class="lang">SQL</span></summary><pre><code class="language-sql" data-src="assets/sql/06_potentiel_zones.sql"></code></pre></details>
+            </div>
+          </div>
+        </article>
+
+        <!-- Chapitre 6 : Ventes suspectes -->
+        <article class="chapter" id="fraude">
+          <div class="chapter__grid">
+            <div class="chapter__side reveal">
+              <span class="section__num">1.6</span>
+              <h3>Détection des ventes suspectes</h3>
+              <p>Quatre signaux par agent, chacun comparé aux autres agents (z-score) : ventes jamais activées, clients réutilisés,
+                 concentration en fin de mois, résiliations précoces. Un agent n'est signalé que s'il dévie <b>sur plusieurs signaux à la fois</b>.</p>
+              <div class="insight"><strong>AG-017</strong> sort avec un score de 16, contre 2 pour le suivant&nbsp;: 40 % de ventes jamais activées et 65 % des ventes dans les 5 derniers jours du mois.
+                Sans lui, le terrain passerait sous son objectif.</div>
+            </div>
+            <div>
+              <div class="panel reveal">
+                <div class="panel__head"><h5>Score de risque des 30 agents terrain</h5><span class="muted">6 derniers mois</span></div>
+                <div class="chart-box"><canvas id="riskChart" role="img" aria-label="Score de risque par agent"></canvas></div>
+              </div>
+              <div class="panel reveal"><div class="table-wrap"><table id="riskTable"></table></div></div>
+              <details class="code"><summary>sql/05_ventes_suspectes.sql <span class="lang">SQL</span></summary><pre><code class="language-sql" data-src="assets/sql/05_ventes_suspectes.sql"></code></pre></details>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= RECOMMANDATIONS ================= -->
+    <section class="section" id="recommandations" style="background:var(--surface-1);border-block:1px solid var(--line)">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__num">02 — AIDE À LA DÉCISION</span>
+          <h2>Le plan d'actions que je présenterais au comité commercial</h2>
+          <p>Une analyse ne vaut que par les décisions qu'elle déclenche. Chaque action est chiffrée et accompagnée d'un indicateur de suivi.</p>
+        </div>
+        <div class="reco">
+          <div class="card reveal"><h3>Relancer la distribution à Tampouy et Tanghin</h3>
+            <p>Les deux zones ont perdu environ 85 % de leur part dans le canal Distributeurs depuis août, soit à peu près 25 ventes par mois. Il faut une visite terrain sous 7 jours (rupture de stock de box, départ d'un distributeur, concurrence ?) et deux agents terrain en renfort pendant ce temps.</p>
+            <div class="impact">Suivi : part de la zone ≥ 8 % sous 2 mois</div></div>
+          <div class="card reveal" data-delay="1"><h3>Auditer les ventes de l'agent AG-017</h3>
+            <p>Il faut rappeler un échantillon de clients pour vérifier les ventes et suspendre les commissions sur les ventes non activées. Plus largement, la commission ne devrait être versée qu'après l'activation et le premier paiement.</p>
+            <div class="impact">Suivi : ventes jamais activées &lt; 5 % par agent</div></div>
+          <div class="card reveal" data-delay="2"><h3>Piloter le Digital au client fidèle, pas à la vente</h3>
+            <p>L'objectif du Digital devrait porter sur le nombre de clients encore actifs à 3 mois. Il faut aussi un appel de bienvenue au 7e jour et un renouvellement automatique par mobile money.</p>
+            <div class="impact">Suivi : rétention Digital à M3 de 63 % à 72 %</div></div>
+          <div class="card reveal" data-delay="3"><h3>Recentrer la prospection sur le top 3 des quartiers</h3>
+            <p>Ouaga 2000, Pissy et Tampouy concentrent plus de 37 000 foyers raccordables non abonnés. La sectorisation des agents devrait être revue en fonction du score, chaque trimestre.</p>
+            <div class="impact">Suivi : taux de pénétration par zone, chaque mois</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= REPORTING EXCEL ================= -->
+    <section class="section" id="reporting">
+      <div class="container excel">
+        <div class="reveal">
+          <span class="section__num">03 — REPORTING AUTOMATISÉ</span>
+          <h2 style="font:700 clamp(30px,4vw,48px)/1.1 var(--font-display);letter-spacing:-.03em;margin:14px 0 18px">Le rapport du comité, généré en 1 seconde</h2>
+          <p class="muted" style="font-size:18px">Un script Python produit chaque mois un classeur Excel prêt à présenter. Personne n'a de copier-coller à faire, et il n'y a pas de risque d'erreur de saisie.</p>
+          <ul class="checklist">
+            <li>5 onglets : Synthèse, Canaux, Alertes, Zones, Contrôle des ventes</li>
+            <li>Mise en forme conditionnelle : objectifs en rouge, orange ou vert, barres de score</li>
+            <li>Graphique natif Excel des ventes par canal</li>
+            <li>Les points d'attention sont rédigés automatiquement en français</li>
+          </ul>
+          <div class="hero__cta"><a class="btn btn--primary" href="assets/rapport_mensuel.xlsx" download>Télécharger le rapport Excel</a></div>
+        </div>
+        <div class="sheet reveal" data-delay="1" aria-hidden="true">
+          <div class="sheet__bar">▦ rapport_2026-09.xlsx</div>
+          <div class="sheet__tabs"><span>Synthèse</span><span class="on">Canaux</span><span>Alertes</span><span>Zones</span><span>Contrôle ventes</span></div>
+          <div class="table-wrap"><table id="sheetTable"></table></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PARCOURS ================= -->
+    <section class="section" id="parcours" style="background:var(--surface-1);border-block:1px solid var(--line)">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__num">04 — PARCOURS</span>
+          <h2>Un développeur qui parle aussi le langage des chiffres</h2>
+          <p>Mes projets réels m'ont amené à manipuler des données bien avant ce portfolio. Cette double compétence permet de construire soi-même les outils d'analyse, au lieu d'en dépendre.</p>
+        </div>
+        <div class="projects">
+          <article class="card project feature reveal">
+            <span class="kind">Projet data · Python</span>
+            <h3>NexaPredict : moteur d'analyse statistique de matchs de football</h3>
+            <p>Un projet personnel complet, de la collecte des données à la mesure honnête des résultats.</p>
+            <ul>
+              <li>Environ 14 500 matchs réels sur 5 championnats, avec des variables construites sans fuite d'information</li>
+              <li>Deux modèles (loi de Poisson, régression logistique) et un backtest « walk-forward »</li>
+              <li>Une conclusion assumée : le modèle ne bat pas le marché, et je l'ai mesuré et documenté plutôt que de l'enjoliver</li>
+              <li>Une suite de tests automatisés sur le moteur, l'API Spring Boot et l'application mobile Flutter</li>
+            </ul>
+            <div class="tags"><span>Python</span><span>pandas</span><span>scikit-learn</span><span>FastAPI</span><span>pytest</span><span>Spring Boot</span><span>Flutter</span></div>
+          </article>
+          <article class="card project reveal">
+            <span class="kind">Logiciel de gestion · en production</span>
+            <h3>GestiCommerce</h3>
+            <p>Un logiciel de gestion commerciale multi-entreprises : ventes, factures, paiements, stock, devis, dépenses et journal d'audit. Le modèle de données relationnel compte plus de 170 entités, avec des tableaux de bord par activité.</p>
+            <div class="tags"><span>MariaDB</span><span>Spring Boot</span><span>Angular</span><span>VPS Linux</span></div>
+          </article>
+          <article class="card project reveal" data-delay="1">
+            <span class="kind">Missions freelance</span>
+            <h3>Applications pour clients particuliers et PME</h3>
+            <p>Une plateforme de transactions avec bot WhatsApp, reçus PDF et statistiques d'administration (BS Services). Une agence de voyage en version web et mobile (Travel Express). Un site BTP avec calculateur de devis. Plusieurs sites vitrines.</p>
+            <div class="tags"><span>Spring Boot</span><span>Angular</span><span>React</span><span>Flutter</span><span>MySQL</span></div>
+          </article>
+        </div>
+
+        <div class="timeline">
+          <div class="tl-item reveal"><span class="when">2025 → aujourd'hui</span><h4>Développeur indépendant · NexaSoft International</h4><p>Conception et mise en production d'applications de gestion pour des clients. Projets data personnels.</p></div>
+          <div class="tl-item reveal"><span class="when">Juin 2024 → Février 2025</span><h4>Développeur Full Stack · YAMEKA Solutions</h4><p>Front-end, back-end, intégration et déploiement.</p></div>
+          <div class="tl-item reveal"><span class="when">Janvier → Mars 2024</span><h4>Responsable Informatique · Tropic Café</h4><p>Application de gestion des ventes avec rapports détaillés pour les réunions de direction, site e-commerce, réseau.</p></div>
+          <div class="tl-item reveal"><span class="when">2022 → 2023</span><h4>Maintenance informatique · AMTHAMOUR Group · Djago International</h4><p>Gestion du parc informatique et support aux utilisateurs.</p></div>
+          <div class="tl-item reveal"><span class="when">2019 → 2022</span><h4>Licence en Informatique de gestion · Université de l'Unité Africaine (ex-IAM)</h4><p>Bases de données, gestion, statistiques, développement.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= COMPÉTENCES ================= -->
+    <section class="section" id="competences">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__num">05 — COMPÉTENCES</span>
+          <h2>Ma boîte à outils</h2>
+          <p>Ce que je maîtrise, et ce que je suis en train d'apprendre. Je préfère être précis plutôt que d'en promettre trop.</p>
+        </div>
+        <div class="skills">
+          <div class="card reveal"><h4>Données &amp; SQL</h4>
+            <div class="skill-bar" data-level="92"><div class="row"><span>SQL : CTE, fenêtrage, optimisation</span></div><div class="track"><div class="fill"></div></div></div>
+            <div class="skill-bar" data-level="88"><div class="row"><span>MySQL / MariaDB · Oracle</span></div><div class="track"><div class="fill"></div></div></div>
+            <div class="skill-bar" data-level="85"><div class="row"><span>Modélisation relationnelle · UML</span></div><div class="track"><div class="fill"></div></div></div>
+          </div>
+          <div class="card reveal" data-delay="1"><h4>Analyse &amp; Python</h4>
+            <div class="skill-bar" data-level="85"><div class="row"><span>Python · pandas · numpy</span></div><div class="track"><div class="fill"></div></div></div>
+            <div class="skill-bar" data-level="75"><div class="row"><span>Statistiques appliquées · KPIs</span></div><div class="track"><div class="fill"></div></div></div>
+            <div class="skill-bar" data-level="78"><div class="row"><span>Automatisation du reporting (openpyxl)</span></div><div class="track"><div class="fill"></div></div></div>
+          </div>
+          <div class="card reveal" data-delay="2"><h4>Restitution &amp; BI</h4>
+            <div class="skill-bar" data-level="70"><div class="row"><span>Excel : tableaux, mise en forme, graphiques</span></div><div class="track"><div class="fill"></div></div></div>
+            <div class="skill-bar" data-level="80"><div class="row"><span>Tableaux de bord web (Chart.js, Angular)</span></div><div class="track"><div class="fill"></div></div></div>
+            <div class="skill-bar learning" data-level="35"><div class="row"><span>Power BI · AppSheet</span><span class="muted">en apprentissage</span></div><div class="track"><div class="fill"></div></div></div>
+          </div>
+        </div>
+        <div class="card dev-edge reveal">
+          <h4>Ce que mon profil de développeur apporte à l'analyse</h4>
+          <p>J'automatise ce qui se fait à la main, je fiabilise les chiffres avec des tests, et je sais aller chercher la donnée à la source (API, base de production, CRM).
+             Je peux aussi faire évoluer moi-même les outils de reporting. Java, Spring Boot, Angular, JavaScript, Git, Linux.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="contact" id="contact">
+      <div class="hero__glow" style="top:auto;bottom:-500px;right:auto;left:50%;transform:translateX(-50%)" aria-hidden="true"></div>
+      <div class="container reveal">
+        <span class="section__num">06 — CONTACT</span>
+        <h2 style="font-family:var(--font-display);letter-spacing:-.035em;margin:16px 0">Parlons de vos <span class="grad" style="background:linear-gradient(100deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent">chiffres</span>.</h2>
+        <p class="muted" style="font-size:18px">Basé à Ouagadougou · disponible immédiatement.</p>
+        <div class="links">
+          <a class="btn btn--primary" href="mailto:bassingaaboubacar3@gmail.com">bassingaaboubacar3@gmail.com</a>
+          <a class="btn btn--ghost" href="tel:+22657306840">+226 57 30 68 40</a>
+          <a class="btn btn--ghost" href="https://github.com/Tech2456" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>© 2026 Aboubacar Bassinga</span>
+      <span>FibreNet Faso est une entreprise fictive ; toutes les données de l'étude de cas sont simulées.</span>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+  <script src="assets/js/effects.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
